@@ -1,9 +1,9 @@
 class Todo{
-  final int? id;
-  final String title;
-  bool completed;
-  final DateTime date;
-  final int userId;
+  final int? id; // Todo마다 할당되는 ID
+  final String title; // 내용
+  bool completed; // 완료 여부
+  final DateTime date; // Todo의 날짜
+  final int userId; // 이 Todo가 누구의 Todo인지!
 
   Todo({
     this.id,

@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.logout),
           onPressed: (){
-            context.go('/login'); // Todo : context go
+            // TODO 1: 로그인 화면으로 이동하기
           },
         ),
         // 친구 목록 버튼
@@ -34,8 +34,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.people),
             onPressed: (){
-              // 친구 목록 화면으로 이동
-              context.push('/friends'); // Todo : context push
+              // TODO 2: 친구목록 화면으로 이동하기
             },
           ),
         ],
@@ -71,9 +70,7 @@ class HomeScreen extends StatelessWidget {
           Expanded(
             child: Container(
               color: Colors.white,
-              child : mockTodos.isEmpty
-                    ? _buildEmptyState()
-                    : _buildTodoList(mockTodos), // TODO : 조건부 렌더링
+              child : null, // TODO 3 : 조건부 렌더링
             ),
           ),
         ],
@@ -107,7 +104,7 @@ class HomeScreen extends StatelessWidget {
             tileColor: Colors.grey[100],
             leading: Checkbox(
               value: todo.completed,
-              onChanged: null, // 클릭 불가
+              onChanged: null, // 클릭 불가 (Week 3)
             ),
             title: Text(
               todo.title,

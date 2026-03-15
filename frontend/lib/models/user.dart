@@ -9,7 +9,6 @@ class User {
     required this.nickname,
   });
 
-  // JSON 데이터 -> Dart 객체 변환
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
       id: json['id'],
@@ -18,7 +17,6 @@ class User {
     );
   }
 
-  // Dart 객체 -> JSON 변환
   Map<String, dynamic> toJson() => {
     'id': id,
     'loginId': loginId,
